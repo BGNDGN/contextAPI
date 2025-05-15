@@ -1,0 +1,39 @@
+.home-container {
+  padding: 20px;
+  background-color: #eaf6ff;
+  color: #222;
+  text-align: center;
+}
+
+.home-theme-dark {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.home-info {
+  margin-bottom: 20px;
+}
+
+.home-buttons button {
+  margin: 5px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.home-buttons button:hover {
+  background-color: #1e7e34;
+}
+
+@media screen and (max-width: 600px) {
+  .home-buttons button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+}

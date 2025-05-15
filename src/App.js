@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import { LanguageProvider } from "./contexts/LanguageContext";
+
+import Home from "./pages/Home";
+import Navbar from "./pages/Navbar";
+import './css/App.css'; // CSS importu
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <LanguageProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div className="app-container">
+                  <h2>Ana Sayfa</h2>
+                  <Link to="/home"><button>Home'a Git</button></Link>
+                  <Link to="/navbar"><button>Navbar'a Git</button></Link>
+                </div>
+              }
+            />
+            <Route path="/home" element={<Home />} />
+            <Route path="/navbar" element={<Navbar />} />
+          </Routes>
+        </BrowserRouter>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
 
