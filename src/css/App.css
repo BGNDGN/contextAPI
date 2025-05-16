@@ -25,7 +25,6 @@
   background-color: #115293;
 }
 
-/* Responsive tasarım */
 @media (max-width: 600px) {
   .app-container {
     padding: 20px;
