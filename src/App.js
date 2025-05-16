@@ -4,7 +4,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 
 import Home from "./pages/Home";
 import Navbar from "./pages/Navbar";
-import './css/App.css'; // CSS importu
+import './css/App.css'; 
 
 function App() {
   return (
